@@ -137,7 +137,7 @@ function handleRespmod(data, socket)
 
         // Write the data back to the socket, the client will receive it as data from the server
         socket.write('ICAP/1.0 204 No Content\r\n');
-        logger.info('ICAP/1.0 200 4 No Content');
+        logger.info('ICAP/1.0 204 No Content');
 
         var date = moment().subtract('h', 1).format('ddd, DD MMM gggg  HH:mm:ss') + ' GMT';
         socket.write('Date: ' + date + '\r\n');
